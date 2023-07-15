@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@1000&display=swap" rel="stylesheet">
+    <title>Minor Project</title>
+    <style>
+        header {
+            position: sticky;
+            top: 0px;
+            background-color: white;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .line {
+            height: 0.5vh;
+            background-color: brown;
+        }
+        .logo {
+            height: 70px;
+            display: inline;
+        }
+        .logo2 {
+            height: 70px;
+            float: right;
+            margin-top: 5px;
+            margin-right: 0.5vw;
+        }
+        .top::before {
+            content: "";
+            background: url(https://cdn.wallpapersafari.com/67/76/qtpSIw.jpg) no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 85px;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        header h1 {
+            display: inline;
+            padding: 14px;
+            font-size: 2.5rem;
+            font-weight: bolder;
+            font-family: 'Ysabeau Infant', sans-serif;
+        }
+        /* section  */
+        section img {
+            margin-top: 5px;
+            height: 400px;
+            width: 100%;
+            align-items: center;
+
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: lightgoldenrodyellow;
+            padding: 25px;
+            margin: 20px 35px;
+        }
+        .box img {
+            display: block;
+            width: 24vw;
+            height: 40vh;
+            margin: 5px auto;
+        }
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 3rem;
+        }
+        .sub {
+            border: 2px solid rgb(73, 57, 36);
+            padding: 10px;
+            /* background-color: rgb(233, 172, 119); */
+            background: url(https://img.freepik.com/premium-photo/texture-old-faded-vintage-paper-beige-retro-background-grunge-paper-with-spots-streaks_213524-157.jpg?w=2000) no-repeat center center/cover;
+            height: 500px;
+            overflow-y: scroll;
+        }
+
+        /* utility */
+        .p-primary {
+            font-size: 1.3rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        .p-secondary {
+            font-size: 3rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bolder;
+        }
+        .center {
+            text-align: center;
+        }
+        .justify {
+            text-align: justify;
+        }
+        hr {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            color: rgb(222, 111, 13);
+            border: 3px solid;
+
+        }
+        .btn {
+            padding: 5px 10px;
+            border: 2px solid white;
+            background-color: rgb(118, 84, 140);
+            margin: 5px;
+            font-size: 1.2rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .btn a {
+            text-decoration: none;
+            color: white
+        }
+        .btn:hover {
+            background-color: black;
+        }
+        .padding {
+            padding: 0px 29px;
+        }
+        footer {
+            position: fixed;
+            z-index: 100;
+            bottom: 0px;
+            right: 0px;
+            width: 100%;
+            padding: 0px 20px;
+        }
+        footer p {
+            font-size: 30px;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            text-align: right;
+        }
+        footer::before {
+            content: "";
+            background: url(https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg) no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 84px;
+            z-index: -1;
+
+        }
+        @media screen and (max-width:1160px) {
+            .box {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2rem;
+            }
+
+            .box img {
+                width: 33vw;
+                height: 27vh;
+            }
+        }
+        @media screen and (max-width:800px) {
+            .box {
+                grid-template-columns: 1fr;
+            }
+
+            .box img {
+                width: 54vw;
+                height: 32vh;
+                margin: 15px auto;
+            }
+        }
+        @media screen and (max-width:600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .top::before {
+                height: 60px;
+            }
+
+            .logo {
+                height: 50px;
+            }
+
+            .logo2 {
+                height: 50px;
+                margin-top: 3px;
+            }
+        }
+
+        @media screen and (max-width:420px) {
+            .logo {
+                height: 35px;
+            }
+
+            .logo2 {
+                height: 35px;
+                margin-top: 2px;
+            }
+
+            .top::before {
+                height: 48px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            footer p {
+                font-size: 15px;
+            }
+
+            .p-primary {
+                font-size: 1rem;
+            }
+
+            .p-secondary {
+                font-size: 1.5rem;
+
+            }
+
+            .box img {
+                width: 62vw;
+                height: 20vh;
+                margin: 15px auto;
+            }
+
+            .container {
+                padding: 10px;
+                margin: 5px 15px;
+            }
+
+            .btn {
+                font-size: 10px;
+                margin: 5px;
+            }
+        }
+
+        @media screen and (max-width:350px) {
+            .logo {
+                height: 25px;
+            }
+
+            .logo2 {
+                height: 25px;
+            }
+
+            header h1 {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+
+            .p-primary {
+                font-size: 0.8rem;
+            }
+
+            .top::before {
+                height: 34px;
+            }
+
+            .p-secondary {
+                font-size: 1rem;
+
+            }
+
+            .box img {
+                width: 62vw;
+                height: 20vh;
+                margin: 15px auto;
+            }
+
+            .container {
+                padding: 5px;
+                margin: 2px 10px;
+            }
+
+            .btn {
+                font-size: 10px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top">
+            <nav class="line"></nav>
+            <img class="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Unesco_World_Heritage_logo_notext_transparent.svg/1200px-Unesco_World_Heritage_logo_notext_transparent.svg.png"
+                alt="">
+            <h1>Heritage Sites of India</h1>
+            <img src="https://cdn.britannica.com/97/1597-050-008F30FA/Flag-India.jpg" alt="" class="logo2">
+            <nav class="line"></nav>
+        </div>
+    </header>
+
+
+
+    <section>
+        <img src="https://htoindia.com/wp-content/uploads/2017/07/UNESCO-world-heritage-sites-india.jpg" alt="">
+    </section>
+    <section>
+        <div class="container">
+
+            <p class="p-primary justify">India takes pride in flaunting its unsurpassed heritage; eras over eras have
+                influenced, moulded and face lifted the rich heritage of which we all are part of. Distinctive edifices,
+                perennial culture and the determination to keep this incredibility have preserved for us an era no short
+                of marvels.With a startling number of places and monuments enlisted in the list of UNESCO World Heritage
+                Sites, India has made an indelible mark in world history.<br><br>As of 2022, there are 40 World Heritage
+                Sites located in India. Out of these, 32 are cultural, 7 are natural, and one, the Khangchendzonga
+                National Park, is of mixed type. India has the sixth largest number of sites in the world. The first
+                sites to be listed were the Ajanta Caves, Ellora Caves, Agra Fort, and Taj Mahal, all of which were
+                inscribed in the 1983 session of the World Heritage Committee. The most recent site listed was
+                Dholavira, in 2021.At different times, two sites were listed as endangered: the Manas Wildlife Sanctuary
+                was listed between 1992 and 2011 due to poaching and activities of the Bodo militias, and the monuments
+                at Hampi were listed between 1999 and 2006 due to risks from increased traffic and new constructions in
+                surroundings. One site is transnational, The Architectural Work of Le Corbusier is shared with six other
+                countries.In addition, India has 52 sites on its tentative list.</p>
+            <hr>
+            <h2 class="p-secondary center"><b>Some Heritage Sites</b></h2>
+            <hr>
+            <div class="box">
+                <div class="sub">
+                    <h2 class="p-secondary center">Taj Mahal</h2>
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="no image">
+                    <p class="p-primary padding justify">The Taj Mahal was designated as a UNESCO World Heritage Site in
+                        1983 for being "the jewel of Muslim art in India and one of the universally admired masterpieces
+                        of the world's heritage". It is regarded by many as the best example of Mughal architecture and
+                        a symbol of India's rich history. The Taj Mahal attracts more than 6 million visitors a year,[3]
+                        and in 2007 it was declared a winner of the New 7 Wonders of the World (2000–2007) initiative.
+                    </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">Click here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Red Fort</h2>
+                    <img src="https://cdn.britannica.com/75/152475-050-DA89FF0A/Red-Fort-Old-Delhi-India.jpg"
+                        alt="no image">
+                    <p class="p-primary padding justify">The Red Fort or Lal Qila is a historic fort in the Old Delhi
+                        neighbourhood of Delhi, India, that historically served as the main residence of the Mughal
+                        emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12th May 1638, when he
+                        decided to shift his capital from Agra to Delhi. The Red Fort was designated a UNESCO World
+                        Heritage Site in 2007 as part of the Red Fort Complex.</p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Red_Fort" target="_blank">Click here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Qutub Minar</h2>
+                    <img src="https://media.istockphoto.com/id/165204592/photo/qutub-minar-delhi-india.jpg?s=612x612&w=0&k=20&c=YvFLPmQmlgCyX7RGZA1VpKctdC6QsChINzLSMDPNI9k="
+                        alt="no image">
+                    <p class="p-primary padding justify">The Qutb Minar, also spelled Qutub Minar and Qutab Minar, is a
+                        minaret and "victory tower" that forms part of the Qutb complex, which lies at the site of
+                        Delhi’s oldest fortified city, Lal Kot, founded by the Tomar Rajputs. It is a UNESCO World
+                        Heritage Site in the Mehrauli area of South Delhi, India. It is one of the most visited tourist
+                        spots in the city, mostly built between 1199 and 1220. It can be compared to the 62-metre
+                        all-brick Minaret of Jam in Afghanistan, of c.1190, which was constructed a decade or so before
+                        the probable start of the Delhi tower. The surfaces of both are elaborately decorated with
+                        inscriptions and geometric patterns. The Qutb Minar has a shaft that is fluted with "superb
+                        stalactite bracketing under the balconies" at the top of each stage. In general, minarets were
+                        slow to be used in India and are often detached from the main mosque where they exist. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Qutb_Minar" target="_blank">Click here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Hawa Mahal</h2>
+                    <img src="https://www.tourmyindia.com/images/hawa-mahal-fort-jaipur.jpg" alt="no image">
+                    <p class="p-primary justify padding">The Hawa Mahal is a palace in the city of Jaipur, India. Built
+                        from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the
+                        Zenana, or women's chambers.The structure was built in 1799 by the Maharaja Sawai Pratap Singh,
+                        grandson of Maharaja Sawai Jai Singh, the founder of the city of Jhunjhunu in the state of
+                        Rajasthan.[1] He was so inspired by the unique structure of Khetri Mahal that he built this
+                        grand and historical palace. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Hawa_Mahal" target="_blank">Click here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Rani Ki Vav</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Rani_ki_vav_02.jpg" alt="no image">
+                    <p class="p-primary justify padding">Rani Ki Vav (lit. 'The Queen's Stepwell') is a stepwell
+                        situated in the town of Patan in Gujarat, India. It is located on the banks of the Saraswati
+                        River. Its construction is attributed to Udayamati, the spouse of the 11th-century Chaulukya
+                        king Bhima I. Silted over, it was rediscovered in the 1940s and restored in the 1980s by the
+                        Archaeological Survey of India. It has been listed as one of the UNESCO World Heritage Sites in
+                        India since 2014.
+
+                        The finest and one of the largest examples of its kind, this stepwell is designed as an inverted
+                        temple highlighting the sanctity of water. It is divided into seven levels of stairs with
+                        sculptural panels. These panels have more than 500 principal sculptures and over a thousand
+                        minor ones that combine religious and symbolic imagery. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Rani_ki_Vav" target="_blank">Click
+                                here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Kumbhalgarh Fort</h2>
+                    <img src="https://www.tripsavvy.com/thmb/WTeNf6nzcS1x7sj704RCRBV669U=/2119x1415/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-186361655-5c1b7361c9e77c00019049d3.jpg"
+                        alt="no image">
+                    <p class="p-primary justify padding">Kumbhalgarh (literally "Kumbhal fort"), also known as the Great
+                        Wall of India, is a Mewar fortress on the westerly range of Aravalli Hills, just about 48 km
+                        from Rajsamand city in the Rajsamand district of the Rajasthan state in western India. It is
+                        located about 84 km from Udaipur. It is a World Heritage Site included in Hill Forts of
+                        Rajasthan. It was built during the 15th century by Rana Kumbha.In 2013, at the 37th session of
+                        the World Heritage Committee held in Phnom Penh, Cambodia, Kumbhalgarh Fort, along with five
+                        other forts of Rajasthan, was declared a UNESCO World Heritage Site under the group Hill Forts
+                        of Rajasthan. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Kumbhalgarh" target="_blank">Click
+                                here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Amer fort</h2>
+                    <img src="https://www.jaipurstuff.com/wp-content/uploads/2019/03/amer-fort-jaipur.jpg"
+                        alt="no image">
+                    <p class="p-primary padding justify">Amer Fort or Amber Fort is a fort located in Amer, Rajasthan,
+                        India. Amer is a town with an area of 4 square kilometres (1.5 sq mi) located 11 kilometres (6.8
+                        mi) from Jaipur, the capital of Rajasthan. Located high on a hill, it is the principal tourist
+                        attraction in Jaipur. Amer Fort is known for its artistic style elements. With its large
+                        ramparts and series of gates and cobbled paths, the fort overlooks Maota Lake, which is the main
+                        source of water for the Amer Palace. At the 37th session of the World Heritage Committee held in
+                        Phnom Penh, Cambodia, in 2013, Amer Fort, along with five other forts of Rajasthan, was declared
+                        a UNESCO World Heritage Site as part of the group Hill Forts of Rajasthan. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Amber_Fort" target="_blank">Click here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">India Gate</h2>
+                    <img src="https://curlytales.com/wp-content/uploads/2019/10/goibibo-1.jpg" alt="no image">
+                    <p class="p-primary justify padding">The India Gate (formerly known as All India War Memorial) is a
+                        war memorial located near the Kartavya path on the eastern edge of the "ceremonial axis" of New
+                        Delhi, formerly called Rajpath. It stands as a memorial to 84,000 soldiers of the British Indian
+                        Army who died between 1914 and 1921 in the First World War, in France, Flanders, Mesopotamia,
+                        Persia, East Africa, Gallipoli and elsewhere in the Near and the Far East, and the Third
+                        Anglo-Afghan War. 13,300 servicemen's names, including some soldiers and officers from the
+                        United Kingdom, are inscribed on the gate.[2] Designed by Sir Edwin Lutyens, the gate evokes the
+                        architectural style of the memorial arch such as the Arch of Constantine, in Rome, and is often
+                        compared to the Arc de Triomphe in Paris, and the Gateway of India in Mumbai. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/India_Gate" target="_blank">Click here!</a></button>
+                    </p>
+                </div>
+                <div class="sub">
+                    <h2 class="p-secondary center">Chittorgarh</h2>
+                    <img src="https://static.toiimg.com/photo/93303295.cms" alt="no image">
+                    <p class="p-primary justify padding">The Chittorgarh (literally Chittor Fort), also known as Chittod
+                        Fort, is one of the largest forts in India. It is a UNESCO World Heritage Site. The fort was the
+                        capital of Mewar and is located in the present-day city of Chittorgarh. It sprawls over a hill
+                        180 m (590.6 ft) in height spread over an area of 280 ha (691.9 acres) above the plains of the
+                        valley drained by the Berach River. The fort covers 65 historic structures, which include four
+                        palaces, 19 large temples, 20 large water bodies, 4 memorials and a few victory towers.In 2013,
+                        at the 37th session of the World Heritage Committee held in Phnom Penh, Cambodia, Chittorgarh
+                        Fort, along with five other forts of Rajasthan, was declared a UNESCO World Heritage Site, as a
+                        group called the Hill Forts of Rajasthan. </p>
+                    <p class="p-primary center">Click here to know more:-<button class="btn"><a
+                                href="https://en.wikipedia.org/wiki/Chittor_Fort" target="_blank">Click
+                                here!</a></button>
+                    </p>
+                </div>
+            </div>
+            <div align="center">
+                <p class="p-secondary"><br>National Anthem:- <audio
+                        src="https://www.deshgujarat.com/wp-content/uploads/2008/01/OurNationalAnthemAudio.mp3"
+                        controls></audio></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Designed and Developed by :- Pranshu Patel</p>
+    </footer>
+
+</body>
+
+</html>
